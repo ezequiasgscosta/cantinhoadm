@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// Importe o seu LayoutCliente (ajuste o caminho da pasta se necessário)
+import LayoutCliente from "./conponents/LayoutCliente"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +26,17 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-br"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-screen flex-col">
+        {/* O LayoutCliente entra aqui abraçando o children. 
+          Ele vai injetar o Cabecario e o MenuLateral com a lógica de clique funcionando!
+        */}
+        <LayoutCliente>
+          {children}
+        </LayoutCliente>
+      </body>
     </html>
   );
 }
