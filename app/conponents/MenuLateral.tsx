@@ -1,4 +1,15 @@
+import { url } from "inspector";
+import { useRouter } from "next/navigation";
+
 export default function MenuLateral() {
+
+  const router = useRouter();
+
+  const irParaFuncionarios = () => {
+    // Redireciona o usuário para a rota /funcionarios
+    router.push("/Funcionarios");
+  };
+
   return (
     <aside 
       id="menu_hamburguer" 
@@ -14,9 +25,9 @@ export default function MenuLateral() {
       </div>
 
       <div className="flex items-center gap-3 p-3 rounded-xl cursor-pointer text-gray-700 hover:bg-pink-500 hover:text-white transition-all duration-200 group">
-        <span className="text-xl group-hover:scale-110 transition-transform">📦</span>
-        <h1 className="text-sm font-semibold tracking-wide">Catálogo</h1>
-      </div>
+  <span className="text-xl group-hover:scale-110 transition-transform">👥</span>
+  <h1 className="text-sm font-semibold tracking-wide" onClick={irParaFuncionarios}>Funcionários</h1>
+</div>
 
       <div className="flex items-center gap-3 p-3 rounded-xl cursor-pointer text-gray-700 hover:bg-pink-500 hover:text-white transition-all duration-200 group">
         <span className="text-xl group-hover:scale-110 transition-transform">🛒</span>
