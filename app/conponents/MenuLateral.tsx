@@ -3,7 +3,7 @@ export default function MenuLateral() {
     <aside 
       id="menu_hamburguer" 
       className="
-        bg-blue-50 m-0 h-screen p-5 border-r border-blue-100 flex flex-col gap-3
+        bg-blue-50 m-0 h-screen pt-15 p-5 border-r border-blue-100 flex flex-col gap-3
         w-64 fixed left-0 top-0 z-40 transition-transform duration-300 md:static md:w-1/4 md:translate-x-0
       "
     >
