@@ -81,6 +81,15 @@ export default function MenuLateral() {
         <h1 className="text-sm font-semibold tracking-wide">Marketing</h1>
       </div>
 
+       {/*Criar Produtos */}
+      <div 
+        onClick={() => navegarPara("/produtos")} 
+        className="flex items-center gap-3 p-3 rounded-xl cursor-pointer text-gray-700 hover:bg-pink-500 hover:text-white transition-all duration-200 group"
+      >
+        <span className="text-xl group-hover:scale-110 transition-transform">📂</span>
+        <h1 className="text-sm font-semibold tracking-wide">Produtos</h1>
+      </div>
+
       {/* Avaliações */}
       <div 
         onClick={() => navegarPara("/avaliacoes")} 
